@@ -1,0 +1,217 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stundent Marksheet</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stundent Marksheet</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+	body {
+		background-color: white;
+		padding: 0px 0px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+	}
+
+	#main {
+		width: 100%;
+		background-color: #FFFFFF;
+		border: 5px solid;
+		border-style: double;
+		padding-bottom: 0px;
+	}
+
+	h1 {
+		text-align: center;
+		font-family: 'Cormorant SC', serif;
+		font-weight: bold;
+		font-size: 2.5rem;
+	}
+
+	#info {
+		border: 2px solid rgb(182, 179, 179);
+		margin: 30px;
+		font-weight: bold;
+	}
+
+	h2 {
+		font-family: 'Cormorant SC', serif;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+
+	table {
+		width: 100%;
+	}
+
+	#main table,
+	th,
+	td {
+		/* border: 2px solid black; */
+		text-align: left;
+	}
+
+	#mark {
+		border: 2px solid rgb(182, 179, 179);
+		margin: 30px;
+		font-weight: bold;
+	}
+
+	#mark input {
+		width: 50px;
+	}
+
+	#result {
+		border: 2px solid rgb(182, 179, 179);
+		margin: 30px;
+		font-weight: bold;
+	}
+
+	#result th {
+		width: 120px;
+	}
+
+	.btn {
+		text-align: center;
+		margin-left: 600px;
+		margin-top: 5px;
+		padding: 8px 12px;
+		background-color: black;
+		border: none;
+		color: white;
+		font-size: 1rem;
+		border-radius: 10px;
+		text-decoration: none;
+	}
+
+	.btn:hover {
+		border: 2px solid black;
+		border-radius: 10px;
+		color: black;
+		background-color: white;
+	}
+
+	#main1 {
+		width: 99%;
+		background-color: #FFFFFF;
+		border: 5px solid;
+		border-style: double;
+		padding-bottom: 0px;
+		margin-left: 300px;
+	}
+</style>
+
+<body>
+
+	<center>
+		<div id="main1">
+			<h1>STUNDENT REPORT CARD</h1>
+			<div id="info">
+				<h2>STUNDENT INFORMATION:</h2>
+				<table th:each="sc :${stdcardlist}">
+					<tr>
+						<th>Name :</th>
+						<td id="fname1">HASHIM</td>
+						<th>Reg. No / Roll No: </th>
+						<td id="rollno1">12345</td>
+					</tr>
+					<tr>
+						<th>Father Name :</th>
+						<td id="faname1">NIZAMUDDIN</td>
+						<th>Date of Birth :</th>
+						<td id="bod1">06/07/2001</td>
+					</tr>
+					<tr>
+						<th>Institute Name :</th>
+						<td id="iname1"></td>
+						<th>Batch :</th>
+						<td id="batch1"></td>
+					</tr>
+				</table>
+
+			</div>
+			<div id="mark">
+				<h2>SUBJECTS MARKS</h2>
+				<table>
+					<tr>
+						<th>SR. NO.</th>
+						<th>SUBJECT NAME</th>
+						<th>PASSING MARKS</th>
+						<th>MARK OBTAINED</th>
+						<th>GRADE</th>
+					</tr>
+					<tr>
+						<td>1.</td>
+						<td>ENGLISH</td>
+						<td>100/35</td>
+						<th id="fend1">89</th>
+						<th id="gread1">A</th>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>HINDI</td>
+						<td>100/35</td>
+						<th id="bend1">78</th>
+						<th id="gread2">A</th>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>MATHS</td>
+						<td>100/35</td>
+						<th id="dbase1">58</th>
+						<th id="gread3">B</th>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>PHYSICS</td>
+						<td>100/35</td>
+						<th id="devops1">85</th>
+						<th id="gread4">A</th>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td>CHEMISTRY</td>
+						<td>100/35</td>
+						<th id="mobile1">75</th>
+						<th id="gread5">A</th>
+					</tr>
+				</table>
+			</div>
+			<div id="result">
+				<h2>RESULT</h2>
+				<table>
+					<tr>
+						<th>TOTAL :</th>
+						<td id="total1">380</td>
+						<th>PERCENTAGE :</th>
+						<td id="per1">78</td>
+					</tr>
+					<tr>
+						<th>GRADE :</th>
+						<td id="grade">A</td>
+						<th>PASS/FAIL :</th>
+						<td id="pf">PASS</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div><button class="btn">Print</button></div>
+	</center>
+</body>
+
+</html>
